@@ -21,7 +21,7 @@ signal segments : std_logic_vector(6 downto 0);
 
 begin 
   uut: seven port map(
-                      S => S
+                      S => S,
                       segments => segments  
                       );
   stim_proc: process
