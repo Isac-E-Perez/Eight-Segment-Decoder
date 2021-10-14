@@ -15,7 +15,7 @@ architecture behavior of seven is
   
 begin 
   
-  f <= SW(3) and SW(2) and SW(1) and SW(0);
+  f <= S(3) and S(2) and S(1) and S(0);
   
     segments(6) <= f;
     segments(5) <= f;
