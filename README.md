@@ -2,8 +2,8 @@
 
 ### About:
 
-Still in progress
-
 ### Note:
+
+Still in progress.
 
 ### Results:
