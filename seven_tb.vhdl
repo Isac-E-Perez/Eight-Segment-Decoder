@@ -29,7 +29,7 @@ begin
     for i in 0 to 15 loop
       S <= to_unsigned(i, 4);
       wait for 10 ns;
-    end loop
+    end loop;
     wait;
   end process;
 end behavior;
