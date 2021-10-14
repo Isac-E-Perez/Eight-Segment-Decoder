@@ -6,7 +6,7 @@ entity seven is
   port(
       S : in unsigned(3 downto 0);
       segments : out std_logic_vector(6 downto 0)
-      )
+      );
 end seven; 
     
 architecture behavior of seven is
