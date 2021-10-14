@@ -6,7 +6,7 @@ entity seven_tb is
 end seven_tb;
   
 architecture behavior of seven_tb is 
-  component 
+  component seven 
     port(
         S : in unsigned(3 downto 0);
         segments : out std_logic_vector(6 downto 0)
