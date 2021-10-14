@@ -14,7 +14,7 @@ architecture behavior of seven_tb is
   end component;
 
 -- Input
-signal S : unsigned(3 downto 0) := 4d"0";
+signal S : unsigned(3 downto 0) := (others => '0');
 
 -- Output 
 signal segments : std_logic_vector(6 downto 0);
