@@ -4,8 +4,8 @@ use ieee.numeric_std.all;
 
 entity seven is 
   port(
-      S : in unsigned(3 downto 0);
-      segments : out std_logic_vector(7 downto 0)
+      D_IN : in unsigned(3 downto 0);
+      SZ_OUT : out std_logic_vector(7 downto 0)
       );
 end seven; 
     
@@ -14,8 +14,8 @@ architecture behavior of seven is
   signal f : std_logic;
   
 begin 
-  with S select
-    segments <= "10000000" when "0000"|"0001",
+  with D_IN select
+    SZ_OUT <=   "10000000" when "0000"|"0001",
                 "01000000" when "0010"|"0011",
                 "00100000" when "0100"|"0101",
                 "00010000" when "0110"|"0111",
