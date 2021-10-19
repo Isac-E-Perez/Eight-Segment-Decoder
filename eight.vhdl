@@ -9,9 +9,7 @@ entity seven is
       );
 end seven; 
     
-architecture behavior of seven is
-  
-  signal f : std_logic;
+architecture behavior of eight is
   
 begin 
   with D_IN select
