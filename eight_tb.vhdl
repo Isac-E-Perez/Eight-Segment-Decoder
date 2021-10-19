@@ -20,7 +20,7 @@ signal SZ_OUT : std_logic_vector(6 downto 0);
 
 begin 
   uut: seven port map(
-                      D_IN => D_IN,
+                      D_IN => D_IN;
                       SZ_OUT => SZ_OUT  
                       );
   stim_proc: process
