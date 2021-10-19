@@ -40,10 +40,10 @@ begin
       D_IN <= '1001'; wait for 20 ns;
       D_IN <= '1010'; wait for 20 ns;
       D_IN <= '1011'; wait for 20 ns;
+      D_IN <= '1100'; wait for 20 ns;
       D_IN <= '1101'; wait for 20 ns;
-      D_IN <= '0001'; wait for 20 ns;
-      D_IN <= '1111'; wait for 20 ns; 
-      D_IN <= '0001'; wait for 20 ns;
+      D_IN <= '1110'; wait for 20 ns; 
+      D_IN <= '1111'; wait for 20 ns;
      
     assert false report "Reached end of test";    
     wait;
