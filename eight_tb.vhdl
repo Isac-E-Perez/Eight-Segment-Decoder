@@ -28,14 +28,22 @@ begin
     wait for 100 ns; -- hold reset state for 100 ns
     
     -- Stimuli: 
-      D_IN <= '0000'; '0001'; wait for 20 ns;
-      D_IN <= '0010'; '0011'; wait for 20 ns;
-      D_IN <= '0100'; '0101'; wait for 20 ns;
-      D_IN <= '0110'; '0111'; wait for 20 ns;
-      D_IN <= '1000'; '1001'; wait for 20 ns;
-      D_IN <= '1010'; '1011'; wait for 20 ns;
-      D_IN <= '1100'; '1101'; wait for 20 ns;
-      D_IN <= '1110'; '1111'; wait for 20 ns;  
+      D_IN <= '0000'; wait for 20 ns;
+      D_IN <= '0001'; wait for 20 ns;
+      D_IN <= '0010'; wait for 20 ns;
+      D_IN <= '0011'; wait for 20 ns;
+      D_IN <= '0100'; wait for 20 ns;
+      D_IN <= '0101'; wait for 20 ns;
+      D_IN <= '0110'; wait for 20 ns;
+      D_IN <= '0111'; wait for 20 ns;
+      D_IN <= '1000'; wait for 20 ns;
+      D_IN <= '1001'; wait for 20 ns;
+      D_IN <= '1010'; wait for 20 ns;
+      D_IN <= '1011'; wait for 20 ns;
+      D_IN <= '1101'; wait for 20 ns;
+      D_IN <= '0001'; wait for 20 ns;
+      D_IN <= '1111'; wait for 20 ns; 
+      D_IN <= '0001'; wait for 20 ns;
      
     assert false report "Reached end of test";    
     wait;
