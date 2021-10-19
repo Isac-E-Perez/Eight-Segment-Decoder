@@ -1,12 +1,12 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity seven is 
+entity eight is 
   port(
       D_IN : in std_logic_vector(3 downto 0);
       SZ_OUT : out std_logic_vector(7 downto 0)
       );
-end seven; 
+end eight; 
     
 architecture behavior of eight is
   
