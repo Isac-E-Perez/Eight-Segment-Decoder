@@ -1,4 +1,4 @@
-# Eight Segment Project
+# Eight Segment Decoder Project
 
 ### About:
 
