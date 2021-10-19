@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 
 entity seven is 
   port(
-      D_IN : in unsigned(3 downto 0);
+      D_IN : in std_logic_vector(3 downto 0);
       SZ_OUT : out std_logic_vector(7 downto 0)
       );
 end seven; 
