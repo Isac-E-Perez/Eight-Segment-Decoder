@@ -1,4 +1,4 @@
-# Seven Segment Project
+# Eight Segment Project
 
 ### About:
 
