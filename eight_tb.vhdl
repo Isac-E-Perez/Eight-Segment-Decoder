@@ -8,13 +8,13 @@ end eight_tb;
 architecture behavior of eight_tb is 
   component eight 
     port(
-        D_IN : in unsigned(3 downto 0);
+        D_IN : in std_logic_vector(3 downto 0);
         SZ_OUT : out std_logic_vector(7 downto 0)
         );
   end component;
 
 -- Input
-signal D_IN : unsigned(3 downto 0) := (others => '0');
+signal D_IN : std_logic_vector(3 downto 0) := (others => '0');
 
 -- Output 
 signal SZ_OUT : std_logic_vector(6 downto 0);
