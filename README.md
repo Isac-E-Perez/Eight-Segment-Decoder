@@ -6,6 +6,8 @@ For this project, I created a eight segment decoder with the use of VHDL code. T
 
 **The relationship between the input and output**
 
+![1](https://user-images.githubusercontent.com/89553126/138173719-e1a988d6-6d27-4d6a-98d7-5ccabaca061f.png)
+
 ### Note:
 
 Still in progress.
