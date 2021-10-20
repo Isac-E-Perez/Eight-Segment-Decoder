@@ -19,7 +19,7 @@ signal D_IN : std_logic_vector(3 downto 0) := (others => '0');
 signal SZ_OUT : std_logic_vector(6 downto 0);
 
 begin 
-  uut: seven port map(
+  uut: eight port map(
                       D_IN => D_IN,
                       SZ_OUT => SZ_OUT  
                       );
