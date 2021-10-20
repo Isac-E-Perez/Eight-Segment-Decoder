@@ -2,7 +2,10 @@
 
 ### About:
 
-For this project, I created a eight segment decoder and used VHDL code the decoder whose output is *sz_out*. A digital decoder is a device which converts one digital format into another. I used Binary Coded Decimal (BCD) to 8-Segment Display Decoder. The BCD to 8 Segment Decoder converts 4 bit binary to 8 bit control signal which can be displayed on 8 segment display. Eight display consist of 8 LED segmnets to display 0 to 9 and A to F.
+For this project, I created a eight segment decoder and used VHDL code the decoder whose output is *sz_out*. A digital decoder is a device which converts one digital format into another. I used Binary Coded Decimal (BCD) to 8-Segment Decoder. The BCD to 8 Segment Decoder converts 4 bit binary to 8 bit control signal. The icruit contains an input bundle of four singals and an output bundle of eight singals. The input bunle, D_IN, represents a 4-bit binary number. The output bundle, SZ_OUT, is used to indicate the magnitude of the 4-bit binary input number. The relationship between the input and output is hown in the tbale below. 
+
+**The relationship between the input and output**
+
 ### Note:
 
 Still in progress.
