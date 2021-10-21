@@ -28,7 +28,7 @@ The vertical bar is used as a selection character in the choices section of the 
 
 The selected signal assignment statement is evaluated each time there is a change in the chooser expression listed in the first line of the selected signal assignment statement. Re-evaluation also occurs every time there is a change in a conditional signal on the right-hand side of the signal assignment operator.
 
-Afterwards, I worked on the behavioral (functional) simulation. Here, I will only verify the operation of the circuit. Stimuli is provided to the circuit, so I can verify the outputs behave as I expect. The VHDL file called 'eight_tb' is where I specified the stimuli to the circuit.
+Afterwards, I worked on the behavioral (functional) simulation. Here, I will only verify the operations of the circuit. Stimuli is provided to the circuit, so I can verify the outputs behave as I expect. The VHDL file called 'eight_tb' is where I specified the stimuli to the circuit.
 
 <img width="590" alt="Screen Shot 2021-10-20 at 9 01 59 PM" src="https://user-images.githubusercontent.com/89553126/138198403-5afce0b7-f29a-4468-9a1a-07ef6630a228.png">
 
