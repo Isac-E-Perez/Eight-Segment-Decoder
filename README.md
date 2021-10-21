@@ -11,11 +11,7 @@ For this project, I created a eight segment decoder with the use of VHDL code. T
 **Black box**
 
 <img width="377" alt="Screen Shot 2021-10-20 at 8 12 43 PM" src="https://user-images.githubusercontent.com/89553126/138193587-ce2b881a-8a87-48be-9326-c182c0f5ba8a.png">
-
-### Note:
-
-Still in progress.
-
+ 
 ### Results:
 
 ![0](https://user-images.githubusercontent.com/89553126/138167195-c8e20729-9058-4e55-9d2d-fb4533275fcf.png)
