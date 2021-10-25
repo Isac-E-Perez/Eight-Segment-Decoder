@@ -46,4 +46,4 @@ Finally, I verified the units outputted by using a waveform viewer.
 
 ![1](https://user-images.githubusercontent.com/89553126/138167202-9f146847-3e7f-4bed-99ae-c682147eab5c.png)
  
-Looking back to the relationship between the input and output and the black box, the code produce what should be expected, therefore, I know my eight segment decoder code is operating correctly. 
+Looking back to the relationship between the input and output, waveform and the black box, the code produce what should be expected, therefore, I know my eight segment decoder code is operating correctly. 
