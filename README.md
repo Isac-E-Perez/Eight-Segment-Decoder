@@ -18,11 +18,36 @@ In VHDL, *D_IN* is an input (**IN**), and *SZ_OUT* is an output (**OUT**) of my 
 
 **I/O's are specified here (the circuit is specified using a Hardware Desciption Language)**
 
-<img width="337" alt="Screen Shot 2021-10-20 at 8 55 31 PM" src="https://user-images.githubusercontent.com/89553126/138197803-2a5d278b-2054-4594-bbb8-86b9112a5c66.png">
+```VHDL
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity eight is 
+  port(
+    D_IN : in std_logic_vector(3 downto 0);
+    SZ_OUT : out std_logic_vector(7 downto 0)
+    );
+end eight; 
+```
 
 **Internal description of the eight segment decoder is specified here**
 
-<img width="337" alt="Screen Shot 2021-10-20 at 8 56 45 PM" src="https://user-images.githubusercontent.com/89553126/138197901-996ac5be-fc16-46ac-9597-3b72d6395372.png">
+```VHDL
+architecture behavior of eight is
+  
+begin 
+  with D_IN select
+    SZ_OUT <= "10000000" when "0000"|"0001",
+              "01000000" when "0010"|"0011",
+              "00100000" when "0100"|"0101",
+              "00010000" when "0110"|"0111",
+              "00001000" when "1000"|"1001",
+              "00000100" when "1010"|"1011",
+              "00000010" when "1100"|"1101",
+              "00000001" when "1110"|"1111",
+              "00000000" when others;  
+end behavior;
+```
  
 The vertical bar is used as a selection character in the choices section of the selected signal assignment statement. This increases the readability of the code. The selected signal assignment statement is one form of a concurrent statement. This is verified by the fact that there is only one signal assignment statement in the body of the selected signal assignment statement.
 
@@ -30,9 +55,57 @@ The selected signal assignment statement is evaluated each time there is a chang
 
 Afterwards, I worked on the behavioral (functional) simulation. Here, I will only verify the operations of the circuit. Stimuli is provided to the circuit, so I can verify the outputs behave as I expect. The VHDL file called 'eight_tb' is where I specified the stimuli to the circuit.
 
-<img width="590" alt="Screen Shot 2021-10-20 at 9 01 59 PM" src="https://user-images.githubusercontent.com/89553126/138198403-5afce0b7-f29a-4468-9a1a-07ef6630a228.png">
+```VHDL
+library ieee;
+use ieee.std_logic_1164.all;
 
-<img width="475" alt="Screen Shot 2021-10-20 at 9 02 16 PM" src="https://user-images.githubusercontent.com/89553126/138198423-67e2909b-cfa3-42ae-b13a-5e18b8dd11b3.png">
+entity eight_tb is
+end eight_tb;
+  
+architecture behavior of eight_tb is 
+  component eight 
+    port(
+        D_IN : in std_logic_vector(3 downto 0);
+        SZ_OUT : out std_logic_vector(7 downto 0)
+        );
+  end component;
+
+-- Input
+signal D_IN : std_logic_vector(3 downto 0) := (others => '0'); -- default value
+
+-- Output 
+signal SZ_OUT : std_logic_vector(7 downto 0);
+
+begin 
+  uut: eight port map(D_IN => D_IN, SZ_OUT => SZ_OUT);
+  
+	stim_proc: process
+	begin 
+		wait for 100 ns; -- hold reset state for 100 ns
+    
+		-- Stimuli: 
+		D_IN <= "0000"; wait for 20 ns;
+		D_IN <= "0001"; wait for 20 ns;
+		D_IN <= "0010"; wait for 20 ns;
+		D_IN <= "0011"; wait for 20 ns;
+		D_IN <= "0100"; wait for 20 ns;
+		D_IN <= "0101"; wait for 20 ns;
+		D_IN <= "0110"; wait for 20 ns;
+		D_IN <= "0111"; wait for 20 ns;
+		D_IN <= "1000"; wait for 20 ns;
+		D_IN <= "1001"; wait for 20 ns;
+		D_IN <= "1010"; wait for 20 ns;
+		D_IN <= "1011"; wait for 20 ns;
+		D_IN <= "1100"; wait for 20 ns;
+		D_IN <= "1101"; wait for 20 ns;
+		D_IN <= "1110"; wait for 20 ns; 
+		D_IN <= "1111"; wait for 20 ns;
+     
+		assert false report "Reached end of test";    
+		wait;
+	end process;
+end behavior;
+```
 
 The entity block has no input or output singals going into or out of the '*testbench*', which makes sense since '*testbench*' is a complete unit. The '*testbench*' will go ahead and send the signals to the circuit in which it will read back those signals. Afterwards, I could check out whether these signals are correct. Therefore, I don't need anything going into or out of the testbench. Additionally, the process statement is a concurrent statement which is constituted of sequential statements exclusively.
 
